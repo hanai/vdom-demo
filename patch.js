@@ -39,7 +39,7 @@ function applyPatches(node, currentPatches) {
     util.each(currentPatches, function(currentPatch) {
         switch (currentPatch.type) {
             case REPLACE:
-                var newNode = (typeof currentPatch.node === 'String') ? document.createTextNode(currentPatch.node) : currentPatch.node.render();
+                var newNode = (typeof currentPatch.node === 'string') ? document.createTextNode(currentPatch.node) : currentPatch.node.render();
                 node.parentNode.replaceChild(newNode, node);
                 break;
             case REORDER:
